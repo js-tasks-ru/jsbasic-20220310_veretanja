@@ -9,9 +9,17 @@ function print(text) {
  * Эту функцию нужно поменять так,
  * чтобы функция sayHello работала корректно
  */
-function isValid(name) {
-  // ваш код...
+ function isValid(name) {
+	// ваш код...
+	
+	if (!(name === null)) {name = name.trim()} ;
+	if ((name == '') || (name === null) || (name.length < 4) || (name.indexOf(' ') > 0)) {
+		return false;
+	 } else  {
+		return true;
+	 } 	
 }
+
 
 function sayHello() {
   let userName = prompt('Введите ваше имя');
